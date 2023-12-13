@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Thoughts Taught</title>
+    <link rel="icon" href="TT_favicon.ico">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/2cfbb12faf.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <script src="jquery-3.6.0.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+        <div class="navbar-header">
+            <div class="navbar-brand">
+                <img src="TT Logo.png" class="ml-2 mt-n2 h-25">
+                <p class="d-inline-block mt-1 ml-2 h3"><span class="text-primary">Tho</span>
+                    <span class="text-success ml-n2">ug</span>
+                    <span class="text-primary ml-n2">hts </span>
+                    <span class="text-primary">Ta</span>
+                    <span class="text-success ml-n2">ug</span>
+                    <span class="text-primary ml-n2">ht</span>
+                </p>
+            </div>
+        </div>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" id="home" class="nav-link text-secondary mt-1 ml-5 pl-4  h4">Home</a>
+            </li>
+            <li class="nav-item"><a href="#about" class="nav-link text-secondary mt-1 ml-4 pl-4  h4"
+                    data-toggle="modal">About Us</a>
+            </li>
+            <!-- Browse By-->
+            <li class="nav-item dropdown dropright"><a href="#" id="browse"
+                    class="nav-link text-secondary  mt-1 ml-5 pl-2 h4 dropdown-toggle" data-toggle="dropdown">Browse
+                    By</a>
+                <ul class="dropdown-menu bg-white">
+                    <li class="dropdown-item"><a href="#author"
+                            class="text-success font-weight-bold text-decoration-none">Authors</a></li>
+                    <li class="dropdown-item"><a href="#topic"
+                            class="text-success font-weight-bold text-decoration-none">Topics</a></li>
+                    <li class="dropdown-item"><a href="#year"
+                            class="text-success font-weight-bold text-decoration-none">Year</a></li>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="#contactinfo" class="nav-link text-secondary  mt-1 ml-5 pl-2  h4">Contact</a>
+            </li>
+            <li class="nav-item"><a href="Thoughts Taught_Post.html" target="_blank"
+                    class="nav-link text-secondary  mt-1 ml-5 pl-2  h4">Post</a>
+            </li>
+            <li class="nav-item"><input type="text" placeholder="Search...."
+                    class="text-dark ml-5  mt-2 rounded rounded-5  w-75 form-control d-inline-block"
+                    id="searchval">&nbsp;<a class="text-dark d-inline-block" href="#"><i
+                        class="fa-solid fa-magnifying-glass navbar-btn ml-n4" id="searchicon"></i></a>
+            </li>
+            <li class="nav-item"><a href="#login" class="nav-link text-primary mt-1 ml-5 pl-5  h4" data-toggle="modal"
+                    id="navlogin">Login</a></li>
+            <li class="nav-item"><a href="#signup" class="nav-link text-primary  mt-1 ml-4  h4" data-toggle="modal"
+                    id="navsignup">Sign
+                    Up</a></li>
+        </ul>
+    </nav>
+    <br>
+    <!--Login Form-->
+    <div class="modal" id="login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class=" d-inline modal-title ml-5 text-secondary h4">Login Page</p>
+                    <span class="close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="umailid" class="text-primary ml-5 h5">Email ID</label>
+                            <input type="text" class="form-control text-dark ml-5 w-75" id="umailid"
+                                placeholder="Enter your Email ID... ">
+                            <p class="d-inline ml-5 text-dark font-weight-bold" id="umailiderror"></p><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="upwd" class="text-primary ml-5 h5">Password</label>
+                            <input type="password" class="form-control text-dark ml-5 w-75" id="upwd"
+                                placeholder="Enter your Password...">
+                            <p class="d-inline ml-5 text-dark font-weight-bold" id="upwderror"></p><br>
+                        </div>
+                        <a class="form-control-plaintext text-success ml-5" href="https://mail.google.com"
+                            target="_blank" title="please reset your password via email">Forget
+                            Password?</a>
+                        <input type="button" value="Login" id="loginmodal"
+                            class="ml-5 d-inline mt-2 bg-dark form-control w-25 text-light">
+                        <p class="d-inline ml-3 form-control-plaintext">Don't have an account?</p><a href="#signup"
+                            data-toggle="modal" data-dismiss="modal">
+                            Sign up</a>
+                    </form>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Sign Up-->
+    <div class="modal" id="signup">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class=" d-inline modal-title ml-5 text-success h4">Sign Up Page</p>
+                    <span class="close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="ufname" class="text-primary ml-5 h5">First Name</label>
+                            <input type="text" class="form-control text-dark ml-5 w-75" id="ufname"
+                                placeholder="Enter your First Name... ">
+                            <p class="d-inline ml-5 text-dark font-weight-bold" id="fnameerror"></p><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="ulname" class="text-primary ml-5 h5">Last Name</label>
+                            <input type="text" class="form-control text-dark ml-5 w-75" id="ulname"
+                                placeholder="Enter your Last Name..">
+                            <p class="d-inline ml-5 text-dark font-weight-bold" id="lnameerror"></p><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="smailid" class="text-primary ml-5 h5">Email ID</label>
+                            <input type="text" class="form-control text-dark ml-5 w-75" id="smailid"
+                                placeholder="Enter your Email ID... ">
+                            <p class="d-inline ml-5 text-dark font-weight-bold" id="smailiderror"></p><br>
+                        </div>
+                        <div class="form-group">
+                            <label for="spwd" class="text-primary ml-5 h5">Password</label>
+                            <input type="password" class="form-control text-dark ml-5 w-75" id="spwd"
+                                placeholder="Enter your Password...">
+                            <p class="d-inline ml-5 text-dark font-weight-bold" id="spwderror"></p><br>
+                        </div>
+                        <a class="form-control-plaintext text-success ml-5" href="Thoughts Taught_TC.html"
+                            target="_blank">Please Read
+                            Terms &
+                            Conditons...</a>
+                        <input type="button" value="Sign Up" id="signupmodal"
+                            class="ml-5 d-inline mt-2 bg-dark form-control w-25 text-light">
+                        <p class="d-inline ml-3 form-control-plaintext">Already have an account?</p><a href="#login"
+                            data-toggle="modal" data-dismiss="modal">
+                            Login</a>
+                    </form>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Progress Bar-->
+    <br>
+    <div class="progress bg-white mt-n5 ">
+        <div class="progres-bar bg-info w-25 h-25" id="pgbar"></div>
+    </div>
+    <!--Toast section-->
+    <div class="card-column float-right mt-5 ">
+        <div class="card float-right border-left-0 border-right-0 border-top-0 border-bottom-0 d-inline">
+            <!--toast 1-->
+            <div class="toast mr-5 bg-success text-white font-weight-bold" data-autohide="false">
+                <div class="toast-header">
+                    <p class="h5 d-inline-block ml-0">Welcome User</p>
+                    <span class="d-inline pl-5 ml-4 ">5 seconds ago</span>
+                    <span class="close text-right" data-dismiss="toast">&times;</span>
+                </div>
+                <div class="toast-body">
+                    <p>Hello!! Welcome to Thought Taught.Lets explore and support us...</p>
+                </div>
+            </div>
+            <!--toast2-->
+            <div class="toast mr-5 bg-danger text-white font-weight-bold" data-autohide="false">
+                <div class="toast-header">
+                    <p class="h5 d-inline-block mr-5">Notification</p>
+                    <span class="d-inline pl-5">2 seconds ago!!</span>
+                    <span class="close " data-dismiss="toast">&times;</span>
+                </div>
+                <div class="toast-body">
+                    <p>Please like, Share the post!!</p>
+                </div>
+            </div>
+        </div><br><br>
+        <!-- new sections-->
+        <div class="card border-left-0 border-right-0 border-top-0 border-bottom-0 d-inline">
+            <div class="card float-right mt-5 mr-5 bg-light shadow-lg">
+                <div class="card-header">
+                    <div class="card-title text-center font-weight-bold text-dark">Topics to be arrived soon....
+                    </div>
+                </div>
+                <div class="card-body">
+                    <a href="#" class="badge badge-primary p-3 rounded-4 ">Jawaharlal Nehru</a>
+                    <a href="#" class="badge badge-primary p-3 rounded-4">Ambedkar</a>
+                    <a href="#" class="badge badge-primary p-3 rounded-4">Anna</a>
+                    <a href="#" class="badge badge-primary p-3 rounded-4 ">Kamarajar</a><br><br>
+                    <a href="#" class="badge badge-warning p-3 rounded-4 ">Self Motivation</a>
+                    <a href="#" class="badge badge-warning p-3 rounded-4">Architecture</a>
+                    <a href="#" class="badge badge-warning p-3 rounded-4">Women Empowerment</a>
+                    <a href="#" class="badge badge-warning p-3 rounded-4">Wonders</a><br><br>
+                    <a href="#" class="badge badge-success p-3 rounded-4 ">Mahatma Gandhi</a>
+                    <a href="#" class="badge badge-success p-3 rounded-4">Vallalar</a>
+                    <a href="#" class="badge badge-success p-3 rounded-4">Bose</a>
+                </div>
+            </div>
+        </div><br><br>
+        <!--Share Option-->
+        <div class="card mt-5  border-left-0 border-right-0 border-top-0 border-bottom-0 ml-n5">
+            <ul class="text-right mt-5 mr-5 float-right list-unstyled">
+                <li class="list-item"><a class="btn btn-primary" href="https://www.facebook.com/" target="_blank"><i
+                            class="fa-brands fa-facebook" id="#s1"></i></a>
+                </li>
+                <li class="list-item"><a class="btn btn-danger" href="https://twitter.com/" target="_blank"><i
+                            class="fa-brands fa-twitter" id="#s2"></i></a></li>
+                <li class="list-item"><a class="btn btn-success" href="https://www.instagram.com/" target="_blank"><i
+                            class="fa-brands fa-instagram" id="#s3"></i></a>
+                </li>
+                <li class="list-item"><a class="btn btn-warning" href="https://www.linkedin.com/" target="_blank"><i
+                            class="fa-brands fa-linkedin-in" id="#s4"></i></a>
+                </li>
+                <li class="list-item"><a class="btn btn-info" href="https://github.com/" target="_blank"><i
+                            class="fa-brands fa-github" id="#s5"></i></a></li>
+                <li class="list-item"><a class="btn btn-danger" href="https://in.pinterest.com/" target="_blank"><i
+                            class="fa-brands fa-pinterest" id="#s6"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--Quote Of the Day section-->
+    <div class="card w-50  mt-4 ml-5 shadow-lg bg-dark">
+        <div class="card-header">
+            <p class="card-title display-4 text-light">Quote Of The Day</p>
+            <span class="h5 ml-2 text-primary" id="qutdate"></span>
+            <p class="d-inline float-right text-white h5 mt-n1">- Jessica Wood</p>
+        </div>
+        <div class="card-body mt-n3 ml-n3 mr-n3 mb-n3">
+            <img src="" class="card-img-bottom" id="qutimg">
+        </div>
+    </div>
+    <br>
+
+    <!-- About Us-->
+    <div class="modal mt-5" id="about">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="h1  modal-title text-primary">About Us</p>
+                    <span class="float-right close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p class="font-weight-bold  text-secondary">Thought Taught is an website , contains collection of
+                        quotes written by great people to refresh
+                        your thoughts.You can also share , download and like thoughts. It was Invented in year 2022,
+                        Kindly reach to us if any queries. And please do support us to do a lot more!!!.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-success" data-dismiss="modal">Support Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Quotes By Authors-->
+    <p id="author"
+        class="h3 border border-top-0 border-right-0 border-bottom-0 border-primary  pt-2 pb-2 shadow-lg bg-light w-75 ml-5 pl-5 mt-3">
+        Quotes by Authors</p>
+    <ul class="ml-5 mt-4 list-unstyled ">
+        <li class="d-inline"><a href="Quotes By Author/Albert_Einstein/TT_Albert_Einstein_1_quote1.html" target="_blank"
+                class="btn-primary btn-lg text-decoration-none" id="Albert Einstein">Albert
+                Einstein</a></li>
+        <li class="d-inline"><a href="Quotes By Author/Abdul_Kalam/TT_Abdul_Kalam_2_quote1.html" target="_blank"
+                class="btn-success btn-lg text-decoration-none" id="Abdul Kalam">Abdul Kalam</a></li>
+        <li class="d-inline"><a href="Quotes By Author/Nelson Mandela/TT_Nelson_Mandela_quote1.html" target="_blank"
+                class="btn-warning btn-lg text-decoration-none" id="Nelson Mandela">Nelsen Mandela</a></li>
+        <li class="d-inline"><a href="Quotes By Author/William Shakespeare/TT_William_Shakespear_quote1.html"
+                target="_blank" class="btn-secondary btn-lg text-decoration-none" id="William Shakespeare">William
+                Shakespheare</a></li>
+        <li class="d-inline"><a href="Quotes By Author/Abraham Lincoln/TT_Abraham_Lincoln_quote1.html" target="_blank"
+                class="btn-danger btn-lg text-decoration-none" id="Abraham Lincoln ">Abraham
+                Lincoln</a></li>
+        <li class="d-inline"><a href="Quotes By Author/Vivekanandar/TT_Vivekanandar_quote1.html" target="_blank"
+                class="btn-dark btn-lg text-decoration-none" id="Vivekandar">Vivekandar</a></li>
+    </ul>
+    <br><br>
+
+    <!--Quotes By Topics-->
+    <p id="topic"
+        class="h3 border border-top-0 border-right-0 border-bottom-0 border-primary  pt-2 pb-2 shadow-lg bg-light w-75 ml-5 pl-5 mt-3">
+        Quotes by Topics</p>
+    <ul class="ml-5 mt-4 list-unstyled ">
+        <li class="d-inline"><a href="Quotes By Topics/Travel/TT_Travel_quote1.html" target="_blank"
+                class="btn-secondary btn-lg text-decoration-none" id="Travel">Travel</a></li>
+        <li class="d-inline"><a href="Quotes By Topics/Nature/TT_Nature_quote1.html" target="_blank"
+                class="btn-warning btn-lg text-decoration-none" id="Nature">Nature</a></li>
+        <li class="d-inline"><a href="Quotes By Topics/Passion/TT_Passion_quote1.html" target="_blank"
+                class="btn-dark btn-lg text-decoration-none" id="Passion">Passion</a></li>
+        <li class="d-inline"><a href="Quotes By Topics/Art/TT_Art_quote1.html" target="_blank"
+                class="btn-success btn-lg text-decoration-none" id="Art">Art</a></li>
+        <li class="d-inline"><a href="Quotes By Topics/Education/TT_Education_quote1.html" target="_blank"
+                class="btn-primary btn-lg text-decoration-none" id="Education">Education</a></li>
+    </ul>
+    <br><br>
+    <!--Quotes By Year-->
+    <p id="year"
+        class="h3 border border-top-0 border-right-0 border-bottom-0 border-primary  pt-2 pb-2 shadow-lg bg-light w-75 ml-5 pl-5 mt-3">
+        Quotes by Year</p>
+    <ul class="ml-5 mt-4 list-unstyled ">
+        <li class="d-inline"><a href="Quotes by Year/TT_quote1.html#batch1" target="_blank"
+                class="btn-danger btn-lg text-decoration-none" id="1800">1800-1900</a></li>
+        <li class="d-inline"><a href="Quotes by Year/TT_quote1.html#batch2" target="_blank"
+                class="btn-success btn-lg text-decoration-none">1900-2000</a></li>
+        <li class="d-inline"><a href="Quotes by Year/TT_quote1.html#batch3" target="_blank"
+                class="btn-primary btn-lg text-decoration-none">2000-2022</a></li>
+    </ul>
+    <br><br>
+    <hr>
+    <!--Contact Info-->
+    <p
+        class="text-primary w-75 bg-light ml-5 pl-5 h3 pt-2  mt-5 pb-2 shadow-lg border border-danger border-top-0 border-bottom-0 border-right-0">
+        Contact Info</p>
+    <!--Subscriptions-->
+    <aside class="float-right mr-5 mt-5  pr-5">
+        <a href="#" class="btn btn-danger text-light h4 rounded rounded-4 mt-4 mr-5 pr-5">Email Subscriptions</a><br />
+        <a href="#" class="btn btn-primary text-light h4 rounded rounded-4   mr-5 pr-5">Instagram</a><br />
+        <a href="#" class="btn btn-success text-light h4 rounded rounded-4   mr-5 pr-5">Facebook</a>
+    </aside>
+    <div id="contactinfo">
+        <input type="text" id="username" class="form-control text-success font-weight-bold w-25 ml-5 pl-3 mt-4"
+            placeholder="Enter your name..." name="username">
+        <p class="d-inline ml-5 text-dark font-weight-bold" id="nameerror"></p>
+        <input type="email" id="mailid" class=" form-control font-weight-bold text-success w-25 ml-5 pl-3 mt-4"
+            name="email" placeholder="Enter your Email ID..">
+        <p class="d-inline ml-5 text-dark font-weight-bold" id="mailiderror"></p>
+        <textarea id="cmnts" class="form-control font-weight-bold text-success w-25 ml-5 pl-3 mt-4" name="comments"
+            placeholder="Enter your comments..."></textarea>
+        <p class="d-inline ml-5 text-dark font-weight-bold" id="queryerror"></p>
+        <input type="button" class="form-control text-light bg-success w-25 ml-5 pl-3 mt-3" value="Submit" id="csubmit"
+            name="csubmit">
+    </div>
+    <br />
+    <br />
+    <p class="text-secondary h5 text-center">2022 &copy; Thoughts Taught . All rights reserved.</p>
+    <hr class="bg-secondary w-75">
+    <!--Script-->
+    <script>
+        let loginflag = false;
+        $(document).ready(function () {
+            //to show Quote of the day.
+            let day = new Date();
+            let dd = day.getDate();
+            let mm = day.toLocaleString('default', { month: 'long' });
+            let year = day.getFullYear();
+            let res = dd % 10;
+            $("#qutimg").attr("src", "Quote_Of_The_Day/" + res + ".jpg");
+            $("#qutdate").text(mm + " " + dd + ", " + year);
+            /////////////////////////////////////////////////////////
+            //to  hover share options
+            //mouseenter
+            $(".fa-brands").each(function () {
+                $(this).mouseenter(function () {
+                    let val = $(this).attr("id");
+                    // $(this).addClass("text-right");
+                    switch (val) {
+                        case "#s1":
+                            {
+                                $(this).text(" Facebook");
+                                break;
+                            }
+                        case "#s2":
+                            {
+                                $(this).text("  Twitter");
+                                break;
+                            }
+                        case "#s3":
+                            {
+                                $(this).text("  Instagram");
+                                break;
+                            }
+                        case "#s4":
+                            {
+                                $(this).text("  Linked In");
+                                break;
+                            }
+                        case "#s5":
+                            {
+                                $(this).text("  Github");
+                                break;
+                            }
+                        case "#s6":
+                            {
+                                $(this).text("  Pinterest");
+                                break;
+                            }
+                    }
+
+                });
+            });
+            //mouseleave
+            $(".fa-brands").each(function () {
+                $(this).mouseleave(function () {
+                    $(this).text("");
+                });
+            });
+            /////////////////////////////////////////////////////////
+            //Contact info validation.
+            $("#csubmit").click(function () {
+                //Name field check
+                let npat = /^[a-z]+$/i;
+                if (npat.test($("#username").val())) {
+                    $("#nameerror").text("");
+                }
+                else {
+                    $("#nameerror").text("Please Enter the Name in alphabets.");
+                }
+                //mail id check
+                let epat = /[a-z1-9]+@[a-z]+.com|[a-z1-9]+@[a-z]+.in/gi;
+                if (epat.test($("#mailid").val())) {
+                    $("#mailiderror").text("");
+                }
+                else {
+                    $("#mailiderror").text("Please Enter the correct Email ID..");
+                }
+                //cmts check.
+                if ($("#cmnts").val().length < 1) {
+                    $("#queryerror").text("Please Enter the comments...");
+                }
+                else {
+                    $("#queryerror").text("");
+                }
+                //submit button
+                if (($("#nameerror").text() == "") && ($("#mailiderror").text() == "") && ($("#cmnts").text() == "")) {
+                    $("#csubmit").val("Submitted...");
+                }
+            });
+            /////////////////////////////////////////////////////////
+            //Login page Validation:
+            $("#loginmodal").click(function (e) {
+                //mail ID validation.
+                let epat = /[a-z1-9]+@[a-z]+.com|[a-z1-9]+@[a-z]+.in/gi;
+                if (epat.test($("#umailid").val())) {
+                    $("#umailiderror").text("");
+                }
+                else {
+                    $("#umailiderror").text("Please Enter the correct Email ID..");
+                }
+                //password check
+                let epwd = /1111/g;
+                if (epwd.test($("#upwd").val())) {
+                    $("#upwderror").text("");
+                }
+                else {
+                    $("#upwderror").text("Please Enter the correct Password..");
+                }
+                //if no error:
+                if (($("#umailiderror").text() == "") && ($("#upwderror").text() == "")) {
+                    $("#loginmodal").attr("data-dismiss", "modal");
+                    $("#navlogin").text($("#umailid").val());
+                    $("#navsignup").addClass("invisible");
+                    $("#navlogin").removeClass("h4");
+                    $("#navlogin").addClass("h6");
+                    loginflag = true;
+                }
+            });
+            /////////////////////////////////////////////////////////////
+            //Signup page Validation:
+            $("#signupmodal").click(function () {
+                //first name
+                let npat = /^[a-z]+$/i;
+                if (npat.test($("#ufname").val())) {
+                    $("#fnameerror").text("");
+                }
+                else {
+                    $("#fnameerror").text("Please Enter the First Name in alphabets.");
+                }
+                //last name
+                let nlpat = /^[a-z]+$/i;
+                if (nlpat.test($("#ulname").val())) {
+                    $("#lnameerror").text("");
+                }
+                else {
+                    $("#lnameerror").text("Please Enter the Last Name in alphabets.");
+                }
+                //mail ID validation.
+                let epat = /[a-z1-9]+@[a-z]+.com|[a-z1-9]+@[a-z]+.in/gi;
+                if (epat.test($("#smailid").val())) {
+                    $("#smailiderror").text("");
+                }
+                else {
+                    $("#smailiderror").text("Please Enter the correct Email ID..");
+                }
+                //password check
+                let epwd = /1111/g;
+                if (epwd.test($("#spwd").val())) {
+                    $("#spwderror").text("");
+                }
+                else {
+                    $("#spwderror").text("Please Enter the correct Password..");
+                }
+                //if no error:
+                if (($("#fnameerror").text() == "") && ($("#lnameerror").text() == "") && ($("#smailiderror").text() == "") && ($("#spwderror").text() == "")) {
+                    $("#signupmodal").attr("data-dismiss", "modal");
+                    $("#navsignup").text($("#ufname").val() + " " + $("#ulname").val());
+                    $("#navlogin").addClass("invisible");
+                    $("#navsignup").removeClass("h4");
+                    $("#navsignup").addClass("h6");
+                    loginflag = true;
+                }
+            });
+            //////////////////////////////////////////////////////////////
+            //search option
+            $("#searchicon").click(function () {
+                if ($(document).text().includes($("#searchval").val())) {
+                    $("#searchicon").parent().attr("href", "#" + $("#searchval").val());
+                }
+                else {
+                    $("#searchval").val("No Matches found!!!");
+                }
+            });
+            /////////////////////////////////////////////////////////////
+            //Progress bar
+            let pat = /^w-[0-9]+$/gi;
+            $("#home").click(function () {
+                let arr = [];
+                let desval = '';
+                [...arr] = $("#pgbar").attr("class").split(" ");
+                (arr.map(i => {
+                    if (i.match(pat)) {
+                        desval = i.match(pat);
+                    }
+                }
+                ));
+                $("#pgbar").removeClass(desval);
+                $("#pgbar").addClass("w-25");
+            });
+
+            $("#browse").click(function () {
+                let arr = [];
+                let desval = '';
+                [...arr] = $("#pgbar").attr("class").split(" ");
+                (arr.map(i => {
+                    if (i.match(pat)) {
+                        desval = i.match(pat);
+                    }
+                }
+                ));
+                $("#pgbar").removeClass(desval);
+                $("#pgbar").addClass("w-50");
+            });
+            $("#searchval").click(function () {
+                let arr = [];
+                let desval = '';
+                [...arr] = $("#pgbar").attr("class").split(" ");
+                (arr.map(i => {
+                    if (i.match(pat)) {
+                        desval = i.match(pat);
+                    }
+                }
+                ));
+                $("#pgbar").removeClass(desval);
+                $("#pgbar").addClass("w-75");
+            });
+            $("#signup").click(function () {
+                let arr = [];
+                let desval = '';
+                [...arr] = $("#pgbar").attr("class").split(" ");
+                (arr.map(i => {
+                    if (i.match(pat)) {
+                        desval = i.match(pat);
+                    }
+                }
+                ));
+                $("#pgbar").removeClass(desval);
+                $("#pgbar").addClass("w-100");
+            });
+            ///////////////////////////////////////////////////////////
+            //if not logged in show error.
+            setInterval(function () {
+                if (loginflag == false) {
+                    alert("Please Login/Signup!!!");
+                }
+            }, 10000);
+            /////////////////////////////////////////
+            //Toast
+            $(".toast").toast("show");
+        });
+    </script>
+</body>
+
+</html>

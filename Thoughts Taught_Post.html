@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Thoughts Taught Posting_Quote</title>
+    <link rel="icon" href="TT_favicon.ico">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body class="bg-info">
+    <script src="jquery-3.6.0.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <!--Nav bar-->
+    <nav class="navbar-expand-lg bg-white fixed-top shadow-lg">
+        <div class="navbar-header">
+            <div class="navbar-brand">
+                <img src="TT Logo.png" class="ml-2 mt-n2 h-25">
+                <p class="d-inline-block mt-1 ml-2 h3"><span class="text-primary">Tho</span>
+                    <span class="text-success ml-n2">ug</span>
+                    <span class="text-primary ml-n2">hts </span>
+                    <span class="text-primary">Ta</span>
+                    <span class="text-success ml-n2">ug</span>
+                    <span class="text-primary ml-n2">ht</span>
+                </p>
+            </div>
+        </div>
+    </nav>
+    <br><br>
+    <!-- Display Preview-->
+    <div class="card float-right  w-25 invisible mr-5 mt-5 border border-primary" id="preview">
+        <img src="" class="card-img-top" id="preview-img">
+        <div class="card-img-overlay mr-5">
+            <p class="card-text h4 text-white text-center pl-5 mt-5" id="preview-text"></p>
+        </div>
+    </div>
+
+    <!-- Section -->
+    <div class="mt-4">
+        <!--full name-->
+        <label class="form-label mt-4 ml-5 h5 text-white" for="nam">Enter Full Name: </label><br>
+        <input type="text" class="form-control w-25 mt-1 ml-5 shadow-lg" id="nam" placeholder="Enter your full Name...">
+        <p class="d-inline ml-5 text-dark font-weight-bold" id="namerror"></p><br>
+        <!--email id-->
+        <label class="form-label mt-1 ml-5 h5 text-white" for="mail">Enter Email: </label><br>
+        <input type="email" class="form-control w-25 mt-1 ml-5 shadow-lg" id="mail"
+            placeholder="Enter your Email ID...">
+        <p class="d-inline ml-5 text-dark font-weight-bold" id="mailerror"></p><br>
+        <!--category-->
+        <label class="form-label mt-1 ml-5 h5 text-white" for="cat">Select the Category to be added:</label><br>
+        <select id="cat" class="w-25 mt-1 ml-5 form-select p-2 shadow-lg ">
+            <option class="text-dark h6 ">Select a value</option>
+            <option class="text-dark h6 ">Authors</option>
+            <option class="text-dark h6 ">Topics</option>
+            <option class="text-dark h6">Year</option>
+        </select><br>
+        <p class="d-inline ml-5 text-dark font-weight-bold" id="caterror"></p><br>
+        <!--Quote-->
+        <label class="form-label mt-1 ml-5 h5 text-white" for="quote">Quote: </label><br>
+        <textarea class="form-control w-25 mt-1 ml-5 shadow-lg" id="quote" placeholder="Enter the Quote.."></textarea>
+        <p class="d-inline ml-5 text-dark font-weight-bold" id="quoteerror"></p><br>
+        <!--Size of the pic-->
+        <label class="form-label mt-1 ml-5 h5 text-white" for="px">Select the size of picture: </label><br>
+        <select id="px" class="w-25 mt-1 ml-5 form-select p-2 shadow-lg">
+            <option class="text-dark h6 ">Select a value</option>
+            <option class="text-dark h6 ">small</option>
+            <option class="text-dark h6 ">medium</option>
+        </select>
+        <button class="btn btn-warning ml-5 font-weight-bold p-2" id="create">Create Quote</button><br>
+        <p class="d-inline ml-5 text-dark font-weight-bold" id="sizeerror"></p><br>
+    </div>
+    <!--Background for the Quote-->
+    <label class="form-label mt-4 ml-5 h5 text-white" for="bg">Select the background: </label><br>
+    <p class="d-inline ml-5 text-dark font-weight-bold" id="bgerror"></p><br>
+    <div class="card-group ml-5 mt-1 mr-5" id="bg">
+        <a class="card h-100 " href="#img1">
+            <img src="Quotes By Author/Abdul_Kalam/a2img6.jpg" id="img1">
+            <div class="card-img-overlay"></div>
+        </a>
+        <a class="card h-100" href="#img2">
+            <img src="Quotes By Author/Abdul_Kalam/a2img2.jpg" class="card-img-top" id="img2">
+            <div class="card-img-overlay"></div>
+        </a>
+        <a class="card h-100" href="#img3">
+            <img src="Quotes By Author/Abdul_Kalam/a2img3.jpg" class="card-img-top" id="img3">
+            <div class="card-img-overlay"></div>
+        </a>
+        <a class="card h-100" href="#img4">
+            <img src="Quotes By Author/Abdul_Kalam/a2img4.jpg" class="card-img-top" id="img4">
+            <div class="card-img-overlay"></div>
+        </a>
+        <a class="card h-100" href="#img5">
+            <img src="Quotes By Author/Abdul_Kalam/a2img5.jpg" class="card-img-top" id="img5">
+            <div class="card-img-overlay"></div>
+        </a>
+        <a class="card h-100" href="#img6">
+            <img src="Quotes By Author/Abdul_Kalam/a2img1.jpg" class="card-img-top" id="img6">
+            <div class="card-img-overlay"></div>
+        </a>
+        <a class="card h-100" href="#img7">
+            <img src="Quotes By Author/Abdul_Kalam/a2img10.jpg" class="card-img-top" id="img7">
+            <div class="card-img-overlay"></div>
+        </a>
+        <a class="card h-100" href="#img8">
+            <img src="Quotes By Author/Abdul_Kalam/a2img8.jpg" class="card-img-top" id="img8">
+            <div class="card-img-overlay"></div>
+        </a>
+        <a class="card h-100" href="#img9">
+            <img src="Quotes By Author/Abdul_Kalam/a2img9.jpg" class="card-img-top" id="img9">
+            <div class="card-img-overlay"></div>
+        </a>
+        <a class="card h-100" href="#img10">
+            <img src="Quotes By Author/Abdul_Kalam/a2img7.jpg" class="card-img-top" id="img10">
+            <div class="card-img-overlay"></div>
+        </a>
+        <p class="d-none" id="imgval"></p>
+        <p class="d-inline ml-5 text-dark font-weight-bold" id="bgrror"></p><br>
+    </div>
+
+    <!--Script Logic-->
+    <script>
+        $(document).ready(function () {
+            //Create Quote
+            $("#create").click(function () {
+                //Name field check
+                let npat = /^[a-z]+$/i;
+                if (npat.test($("#nam").val())) {
+                    $("#namerror").text("");
+                }
+                else {
+                    $("#namerror").text("Please Enter the Name in alphabets.");
+                }
+                //mail id check
+                let epat = /[a-z1-9]+@[a-z]+.com|[a-z1-9]+@[a-z]+.in/gi;
+                if (epat.test($("#mail").val())) {
+                    $("#mailerror").text("");
+                }
+                else {
+                    $("#mailerror").text("Please Enter the correct Email ID..");
+                }
+                //category 
+                if ($("#cat").val() == "Select a value") {
+                    $("#caterror").text("Please select an Option...");
+                }
+                else {
+                    $("#caterror").text("");
+                }
+                //quote  check
+                if ($("#quote").val().length > 1) {
+                    $("#quoteerror").text("");
+                }
+                else {
+                    $("#quoteerror").text("Please Enter the Quote..");
+                }
+                //size  
+                if ($("#px").val() == "Select a value") {
+                    $("#sizeerror").text("Please select an Option...");
+                }
+                else {
+                    $("#sizeerror").text("");
+                }
+                ////background check
+                if ($("#imgval").text().length < 1) {
+                    $("#bgerror").text("Please select the background...");
+                }
+                else {
+                    $("#bgerror").text("");
+                }
+                //setting the preview.
+                if (($("#namerror").text() == "") && ($("#mailerror").text() == "") && ($("#caterror").text() == "")
+                    && ($("#quoteerror").text() == "") && ($("#sizeerror").text() == "") && ($("#bgerror").text() == "")) {
+
+                    $("#preview").removeClass("invisible");
+                    $("#preview").addClass("visible");
+                    $("#preview-img").attr("src", $("#imgval").text());
+                    $("#preview-text").text($("#quote").val());
+                    if ($("#px").val() == "medium") {
+                        $("#preview").removeClass("w-25");
+                        $("#preview").addClass("w-50");
+                    }
+                }
+            });
+        });
+
+        //DOM Loaded
+        $(window).on("load", function () {
+            //background
+            $(".card-img-overlay").each(function (i) {
+                $(this).click(function () {
+                    $("#imgval").text($(this).prev().attr("src"));
+
+                });
+
+            });
+        });
+
+
+    </script>
+
+</body>
+
+</html>
