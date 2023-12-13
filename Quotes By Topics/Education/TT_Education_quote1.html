@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Thoughts Taught Education Quotes</title>
+    <link rel="icon" href="/TT_favicon.ico">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/2cfbb12faf.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-warning">
+    <script src="/jquery-3.6.0.js"></script>
+    <script src="/bootstrap.min.js"></script>
+    <!--Nav bar-->
+    <nav class="navbar-expand-lg bg-light fixed-top">
+        <div class="navbar-header">
+            <div class="navbar-brand">
+                <img src="/TT Logo.png" class="ml-2 mt-n2 h-25">
+                <p class="d-inline-block mt-1 ml-2 h3"><span class="text-primary">Tho</span>
+                    <span class="text-success ml-n2">ug</span>
+                    <span class="text-primary ml-n2">hts </span>
+                    <span class="text-primary">Ta</span>
+                    <span class="text-success ml-n2">ug</span>
+                    <span class="text-primary ml-n2">ht</span>
+                </p>
+            </div>
+        </div>
+    </nav>
+    <br><br>
+    <!-- Section-->
+    <p class="h4 mt-4 ml-5 mb-5 bg-dark text-light p-3 rounded rounded-5 w-25 shadow-lg"> Quotes about Education
+    </p>
+    <!--Education-->
+    <div class="card-deck d-block mx-auto w-50 text">
+        <!--Image 1-->
+        <a class="card text-decoration-none ml-5 mr-5" href="#modalimg" data-toggle="modal">
+            <p class="card-body bg-light text-dark text-center h4 font-italic">An investment in knowledge pays the best
+                interest.
+
+
+            </p>
+            <p class="card-footer bg-dark text-light text-right h5 font-italic"> - Benjamin Franklin
+
+
+            </p>
+        </a>
+        <br>
+        <!--Image 2-->
+        <a class="card text-decoration-none ml-5 mr-5" href="#modalimg" data-toggle="modal">
+            <p class="card-body bg-light text-dark text-center h4 font-italic">Education is the most powerful weapon
+                which you can use to change the world.
+
+            </p>
+            <p class="card-footer bg-dark text-light text-right h5 font-italic"> - Nelson Mandela
+
+            </p>
+        </a>
+        <br>
+        <!--Image 3-->
+        <a class="card text-decoration-none ml-5 mr-5" href="#modalimg" data-toggle="modal">
+            <p class="card-body bg-light text-dark text-center h4 font-italic">Change is the end result of all true
+                learning.
+            </p>
+            <p class="card-footer bg-dark text-light text-right h5 font-italic"> - Leo Buscaglia
+            </p>
+        </a>
+        <br>
+        <!--Image 4-->
+        <a class="card text-decoration-none ml-5 mr-5" href="#modalimg" data-toggle="modal">
+            <p class="card-body bg-light text-dark text-center h4 font-italic">Education's purpose is to replace an
+                empty mind with an open one.
+            </p>
+            <p class="card-footer bg-dark text-light text-right h5 font-italic"> - Malcolm Forbes
+            </p>
+        </a>
+        <br>
+        <!--Image 5-->
+        <a class="card text-decoration-none ml-5 mr-5" href="#modalimg" data-toggle="modal">
+            <p class="card-body bg-light text-dark text-center h4 font-italic">Education is the movement from darkness
+                to light.
+            </p>
+            <p class="card-footer bg-dark text-light text-right h5 font-italic"> - Allan Bloom
+            </p>
+        </a>
+        <br>
+    </div>
+    <!--modal-->
+    <div class="modal w-100" id="modalimg">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="text-right h3 close" data-dismiss="modal">&times;</span>
+                </div>
+                <div class="modal-body text-white " id="mimg">
+                    <p id="mquote" class=" d-block text-center h5"></p>
+                    <span><i class="fa-regular fa-thumbs-up h3 mt-5 pt-5"></i></span>
+                    <span><i class="fa-solid fa-share-nodes h3  mt-5 pt-5 float-right"></i></span>
+                    <!--share option-->
+                    <ul class="text-right mt-5 pt-3 mr-1 float-right list-unstyled d-none fixed-top" id="share">
+                        <li class="list-item"><a class="btn btn-primary" href="https://www.facebook.com/"
+                                target="_blank"><i class="fa-brands fa-facebook" id="#s1"></i></a>
+                        </li>
+                        <li class="list-item"><a class="btn btn-danger" href="https://twitter.com/" target="_blank"><i
+                                    class="fa-brands fa-twitter" id="#s2"></i></a></li>
+                        <li class="list-item"><a class="btn btn-success" href="https://www.instagram.com/"
+                                target="_blank"><i class="fa-brands fa-instagram" id="#s3"></i></a>
+                        </li>
+                        <li class="list-item"><a class="btn btn-warning" href="https://www.linkedin.com/"
+                                target="_blank"><i class="fa-brands fa-linkedin-in" id="#s4"></i></a>
+                        </li>
+                        <li class="list-item"><a class="btn btn-info" href="https://github.com/" target="_blank"><i
+                                    class="fa-brands fa-github" id="#s5"></i></a></li>
+                        <li class="list-item"><a class="btn btn-danger" href="https://in.pinterest.com/"
+                                target="_blank"><i class="fa-brands fa-pinterest" id="#s6"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <p id="mfooter"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Script -->
+    <script>
+        $(document).ready(function () {
+            $(".card").each(function () {
+                $(this).click(function () {
+                    let irandom = Math.floor(Math.random() * 5);
+                    $("#mimg").css("background-image", `url("/Quotes By Topics/Education/e1 (${irandom}).jpg")`);
+                    $("#mimg").css("background-size", "cover");
+                    $("#mimg").css("height", "500px");
+                    $("#mquote").text($(this).find("p").first().text());
+                    $("#mfooter").text($(this).find("p").last().text());
+                });
+            });
+            //like button.
+            let pat = /^fa-regular$/gi;
+            let pat1 = /^fa-solid$/gi;
+            $(".fa-thumbs-up").each(function () {
+                $(this).click(function () {
+                    let arr = [];
+                    let desval = '';
+                    [...arr] = $(this).attr("class").split(" ");
+                    (arr.map(i => {
+                        if (i.match(pat)) {
+                            desval = i.match(pat);
+                            $(this).removeClass(desval);
+                            $(this).addClass("fa-solid");
+                        }
+                        else if (i.match(pat1)) {
+                            desval = i.match(pat1);
+                            $(this).removeClass(desval);
+                            $(this).addClass("fa-regular");
+
+                        }
+                    }));
+
+                });
+
+            });
+             //share icon
+             $(".fa-share-nodes").each(function () {
+                $(this).click(function () {
+                    $("#share").removeClass("d-none");
+                });
+                $(".close").each(function () {
+                    $(this).mouseenter(function () {
+                        $("#share").addClass("d-none");
+                    });
+
+                })
+            });
+        });
+    </script>
+</body>
+
+</html>
