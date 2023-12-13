@@ -130,7 +130,7 @@
             $(".card").each(function () {
                 $(this).click(function () {
                     let irandom = Math.floor(Math.random() * 5);
-                    $("#mimg").css("background-image", `url("/Quotes By Topics/Nature/n1 (${irandom}).jpg")`);
+                    $("#mimg").css("background-image", `url("n1 (${irandom}).jpg")`);
                     $("#mimg").css("background-size", "cover");
                     $("#mimg").css("height", "500px");
                     $("#mquote").text($(this).find("p").first().text());
